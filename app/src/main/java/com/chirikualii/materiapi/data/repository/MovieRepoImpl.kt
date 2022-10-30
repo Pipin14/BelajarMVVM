@@ -20,10 +20,10 @@ class MovieRepoImpl(
                         genre = it.releaseDate,
                         imagePoster = it.posterPath
                     )
-                }
+                }?.toList()
                 Log.e(MovieRepoImpl::class.simpleName,
                     "getPopularMovie : ${Gson().toJsonTree(listData)}")
-                return emptyList()
+                return listData ?: emptyList()
 
             }else{
                 Log.e(MovieRepoImpl::class.simpleName, "getPopularMovie error: ${response.code()}", )

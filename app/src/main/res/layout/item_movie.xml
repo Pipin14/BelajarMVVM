@@ -5,8 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/ivMovie"
+        android:scaleType="centerCrop"
+        app:shapeAppearance="@style/roundImage"
         android:layout_width="130dp"
         android:layout_height="192dp"
         android:layout_marginTop="16dp"
